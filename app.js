@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://shivamkonkar46:<password>@cluster0.kgah6xr.mongodb.net/");
+mongoose.connect("mongodb+srv://shivamkonkar64:VXKz3uJR4kReXtZq@cluster0.qnprsyf.mongodb.net/");
 
 
 
