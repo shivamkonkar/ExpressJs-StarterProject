@@ -21,8 +21,6 @@ const connectDB = async () => {
     }
 }
 
-connectDB()
-
 
 async function createNewDriver(name , email, phone){
     const newDriver = new newdriver({
