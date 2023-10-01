@@ -10,8 +10,18 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://shivamkonkar64:VXKz3uJR4kReXtZq@cluster0.qnprsyf.mongodb.net/");
 
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect("mongodb+srv://shivamkonkar64:VXKz3uJR4kReXtZq@cluster0.qnprsyf.mongodb.net/");
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+}
+
+connectDB()
 
 
 async function createNewDriver(name , email, phone){
@@ -42,6 +52,9 @@ app.post("/", function(req, res){
     res.render("alert", {alert : ALERT})
 })
 
-app.listen(PORT, function(){
-    console.log(`The app start on http://localhost:${PORT}`);
-});
+
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log(`The app start on http://localhost:${PORT}`);
+    })
+})
