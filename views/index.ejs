@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+<%- include("partials/flash"); -%>    
+
+<nav>
+    <% if(!currentUser) { %>
+    <a href="/login" class="nav-link">login</a>
+    <a href="/register" class="nav-link">register</a>
+    <% } else { %>
+    <a href="/logout" class="nav-link">logout</a>
+    <% } %>
+</nav>
+
+
+<%- include("partials/footer"); -%>
