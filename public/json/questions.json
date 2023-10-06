@@ -1,0 +1,21 @@
+[
+    {
+      "question": "Which sounds more like you?",
+      "options": ["Your Personal work style is closer to organized and consistent efforts rather than spontaneous burst of energy.", "You often make decision on a whim."],
+      "Sentence1": ["Structured","Organized","Consistent","Tailored","Effortful"],
+      "Sentence2": ["Versatile","Spontaneous","Eclectic","Effortless","Statement"]
+    },
+    {
+      "question": "Which sounds more like you?",
+      "options": ["You talk to lot of different people at parties.", "You don't like to draw attention to youself and keep to the background."],
+      "Sentence1": ["Social", "Outgoing", "Engaging", "Conversational", "Networking"],
+      "Sentence2": ["Reserved", "Inconspicuous", "Low-key", "Modest", "Unobtrusive"]    
+    },
+    {
+      "question": "Which sounds more like you?",
+      "options": ["You're a visionary, you envision and imagine what things could be even if unrealistic.", "You're a realist, you're practical and see things for what they realistically are."],
+      "Sentence1": ["Visionary", "Imaginative", "Idealistic", "Creative", "Unrealistic"],
+      "Sentence2": ["Realist", "Practical", "Pragmatic", "Grounded", "Realistic"]    
+    }
+  ]
+  

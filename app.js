@@ -14,6 +14,7 @@ const newdriver = require("./schema/newdriver")
 const User = require("./schema/User")
 
 const userRoutes = require('./routes/userRoutes')
+const gptRoutes = require('./routes/gptRoutes')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
@@ -51,7 +52,7 @@ app.use((req, res, next) => {
   });
 
 app.use('/', userRoutes)
-
+app.use('/gpt', gptRoutes)
 
 const connectDB = async () => {
     try {
@@ -87,6 +88,13 @@ app.get('/home', isLoggedIn, (req, res) => {
     res.render('home')
 })
 
+app.get('/card', (req, res) => {
+    res.render('card')
+})
+
+app.get('/question', (req, res) => {
+    res.render('questionaire')
+})
 
 app.post("/", function (req, res) {
 

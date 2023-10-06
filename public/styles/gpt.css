@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: #313866;
+  background: #E3F2FD;
 }
 .chatbot-toggler {
   position: fixed;
@@ -24,7 +24,6 @@ body {
   border-radius: 50%;
   background: #724ae8;
   transition: all 0.2s ease;
-  opacity: 0;
 }
 body.show-chatbot .chatbot-toggler {
   transform: rotate(90deg);
@@ -44,8 +43,8 @@ body.show-chatbot .chatbot-toggler span:last-child {
   position: fixed;
   right: 35px;
   bottom: 90px;
-  width: 800px;
-  background: #974EC3;
+  width: 420px;
+  background: #fff;
   border-radius: 15px;
   overflow: hidden;
   opacity: 0;
@@ -89,11 +88,11 @@ header h2 {
   width: 6px;
 }
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
-  background: #FE7BE5;
+  background: #fff;
   border-radius: 25px;
 }
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
-  background: #FE7BE5;
+  background: #ccc;
   border-radius: 25px;
 }
 .chatbox .chat {

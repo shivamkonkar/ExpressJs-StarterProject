@@ -1,15 +1,35 @@
 <%- include("partials/header"); -%>
 <%- include("partials/flash"); -%>    
 
-<nav>
+<!-- <nav>
     <% if(!currentUser) { %>
-    <a href="/login" class="nav-link">login</a>
-    <a href="/register" class="nav-link">register</a>
+    <div class="hero">
+    </div>
+    
+    <div class = "options">
+        <a href="/login" class="nav-link p-2 text-red-700">login</a>
+        <a href="/register" class="nav-link">register</a>
+    </div>
     <% } else { %>
     <a href="/chatbot" class="nav-link">chatbot</a>
     <a href="/logout" class="nav-link">logout</a>
     <% } %>
-</nav>
+</nav> -->
 
+    <form class="login-form" action="#" method="post">
+        
+        <div class="form-group">
+            <% if(!currentUser) { %>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEv0lEQVR4nO1ZS2wbRRheEOLCgQsgISFxoKpASlouFAIBUlog69iO16lnBESt2uZAiGI73pCnZ1ecCjeCkEKvHCC0EmkcKfGundgzTiUqQQ9IrcSrB1rRRqGoJBS1CnTQv/auXb/wM46rfNKnTXbH/3zfzD//zNqCsIN7EIOdC094xfBpb6e24RW1db9d/2a0O9IqNIv4QVG77hU17rPpt8fcMa5gygliaypmu4XtDi+MPIgX9ZsEUa5gZpFgOitsdwx2autgIDny7G4DiP4pbHd4xfAqGIC0yTagYHZD2O4YFMOnwEB2+qRm4LSw3TH0RniXVwxvZKcQwfS66ontEpoB/Tb9GdkZvTjRE+eTh+LGyDeN+ExIrTMcKDQrpB0DW4SAPfb0sGNpOmCPXBhy6H/IzujNMWn51sShOA96KCeYbSiI/UYwTSiYTSuIvqO+FXtEaCRUNfbASPfSB/4ufQ3Kpt8eMTYvkr/+55ZUzDYVRBdUFLcJAr9vS8UPd8eG/V3638nzjsbH3cuFNq7SiNh5FSc66i58Qlp8fMih/wDCgbIjCoe0yoXjTNI7CqIn5V7tobqI9zm15/225KgDR1ww6qwe/H7y7bNP1lT8uH35VZ+o/2OKH5XqJp4njxzs8iReeaoske6WGZurZeaywdYvRfO+LGktPpu2aYp/37VUV/FKmpfGPezR/9NnAR6YG4/UOvMr3PN4Tj3o74rcMMUHHJGtEs9TXFZVfn8hfXch46G1/cvO6Lwp3mfTeTDPCbP+jPsK6StqYMzFdntF7U4673NfULaCBLMNtffsY2UbkJ2Rc6Z4f1cEanVDDChAxE6UZcC99yvYoP61Rj+jZI50L/P+/Yv8aNs8P7IvxI++MG/8D/dLFVRuDILYmntPGQaOvzJvCDcJb1cEMz7wWpgffm6uIAcOhI12RdKh4hiH286UbmDwzbAlXk5VHrPjvpdD/MzJCF+9RPnmXwnjOvuZzvvaQ5aAQgaqifHe64ulG4DzTeaOC1Nrdvzz+Tjnt1dy+NN3cUvAaJ5UqDaG7IiWY0C3DIz3xPi7HQtGUBg16GjtWoKf+Jjy40Nx4/r7alLA7LRutOvvWMwxUG2M8Z5YZTMQ9MSNxQZBYaqhE+iwdyBu8cOp5P1rv1CjHSzKbAPVxiCIlm4gewFDpYCgkK/QSV8g3TGwT06mxObGSnIx7pvLMVCLGFIlBsobPWa0O9ZWzQywgjEqNgA1GoJCpTDzFzqEUfzok3T+fj0dSebv/tw1UIsYUqUGYCMzKkh7yKgU+SrIj9/GilahWsSQKjVg1PADqRreHjIqBSw2yGe4wqhZNfxgkX2gyhhSMQOZx9V8BkiGgIK76MESduIqYkjFjtPwkgAPgPkMWKkA55iORWORQWWBa7lnoUpjSCl90p4vOoViKGagkRRKRdMb8NnSLzKNFq1YpOslGwg4op97U8eJxgtnwFtBT+KYUA5klyYG7PoFgtnVRgknmF0liH1a1W8L8K0AQewlgmiQIDZXT0MkKXhOwWxSxfRF8xuJmmPUE3lY9aw8qyLmIoj6FUSnFExDBLNzCmIXFUyvwC+SljDjb3oFnkEbQySiU/BZiBFEib0Qsy5id7CDexz/AdnBJeiub0lKAAAAAElFTkSuQmCC">
+                <a href="/login" class="nav-link">login</a>
+                <a href="/register" class="nav-link">sign up</a>
+
+                <% } else { %>
+                <a href="/chatbot" class="nav-link">chatbot</a>
+                <a href="/logout" class="nav-link">logout</a>
+                <% } %>
+
+        </div>
+    </form>
 
 <%- include("partials/footer"); -%>

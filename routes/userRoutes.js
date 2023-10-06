@@ -14,8 +14,8 @@ router.get('/register', (req, res) => {
 //     const newUser = await User.register(user, 'pass123word')
 //     res.send(newUser)
 // })
-router.get("/", isLoggedIn, function (req, res) {
-        res.render("chatbot")
+router.get("/", function (req, res) {
+        res.render("index")
     })
 router.post("/register", async (req, res) => {
     try{
