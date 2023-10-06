@@ -3,6 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 
 const User = require('../schema/User')
+const { isLoggedIn } = require('../middleware')
 
 router.get('/register', (req, res) => {
     res.render('driver-signup')
@@ -13,11 +14,14 @@ router.get('/register', (req, res) => {
 //     const newUser = await User.register(user, 'pass123word')
 //     res.send(newUser)
 // })
-
+router.get("/", isLoggedIn, function (req, res) {
+        res.render("chatbot")
+    })
 router.post("/register", async (req, res) => {
     try{
-        const {username, email, password} = req.body
-        const user = new User({email, username})
+        
+        const {username, email, password,gender,ssize,wsize,shsize,age} = req.body
+        const user = new User({email, username, details:{gender,ssize,wsize,shsize,age}})
         const registeredUser = await User.register(user, password)
         // console.log(registeredUser)
         req.login(registeredUser, err => {
@@ -38,7 +42,7 @@ router.get('/login', (req, res) =>{
 
 router.post('/login', passport.authenticate('local', {failureFlash: true, failureRedirect: '/login'}), (req, res) =>{
     req.flash('success', 'welcome back!')
-    res.redirect('/home')
+    res.render('chatbot')
 })
 
 router.get('/logout', (req, res) => {
@@ -49,5 +53,7 @@ router.get('/logout', (req, res) => {
         res.redirect('/login')
     })
 })
+
+
 
 module.exports = router
